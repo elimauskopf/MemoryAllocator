@@ -1,0 +1,11 @@
+Eli Mauskopf
+prelab-7
+Fall 2018
+
+1. Doubly linked lists are suitable because they allow for quick insertion or deletion in spots besides the head and tail. This is important because in a custom memory allocator there is no guarantee new memory will be allocated at the head or tail.
+2. A stack can be used as we can push to the stack when we need to put things in memory and pop when we need to free
+3. external fragmentation is when there is free space left in memory after is a process is removed. The result is a lot memory that processes can not use because it is not contigous.
+4. Internal fragmentation is when a lot of memory is lost because a process is assigned to a block of memory that is larger than the process needs. The memory not used by the process becomes fragmented.
+5. First fit policy is when we use the first block of memory that fits of our needs. Pro: fastest time to find memory block. Con: can end up wasting a lot of memory
+6. Best fit policy is when we find the block of memory that is closest in size to the amount of memory we need to allocate. Pro: it wastes the least memory. Con: It takes more time to find the right slot in memory.
+7. Worst fit policy is when we find the largest block of memory to use. Pro: The memory not used up by each allocation is larger and has more potential for future use. Con: Can end up wasting a lot of memory and leave us with no memory for processes that requrie a lot of memory.

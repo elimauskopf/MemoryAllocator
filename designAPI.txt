@@ -1,0 +1,19 @@
+Eli Mauskopf
+
+
+
+
+My allocator works as such:
+    - best fit, worst-fit, first fit are their own functions
+    which find a node suitable in free and simply return it
+    - my allocate function takes an int as a parameter to decide which
+    strategy to use. Once a node is found from said strategy, using
+    the functions described earlier I then add the node to allocated list
+    and modify it in the free list
+
+Deallocate:
+    - Find the node in allocated list which has the same data as the paramater
+    - add the node to free list
+    - delete it from the allocated list
+
+

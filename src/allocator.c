@@ -137,22 +137,6 @@ int *allocate(int strategy, size_t size, struct dlist *free, struct dlist *alloc
 }
 
 int deallocate(void *ptr){
-    /*
-    struct dnode *cur_node = dlist_iter_begin(allocated_list);
-    bool found = false;
-    printf("cur node size %d\n", cur_node->size);
-    while(dlist_iter_has_next(allocated_list) || found == false ){
-        if(ptr == cur_node->data){
-            found = true;
-        } else {
-            cur_node  = dlist_iter_next(allocated_list);
-        }        
-    }
-    if(found == false){
-        return -1;
-    }
-        printf("got here\n");
-  */  
 
    struct dnode *temp =  dlist_iter_begin(allocated_list); 
    struct dnode *result = NULL;
